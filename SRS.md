@@ -1847,12 +1847,12 @@ Security by Design Security controls shall be incorporated into each processing 
 
 <!-- Page 133 -->
 
-6.4 High-Level Architecture The application is organized into six logical layers.
-┌──────────────────────────────────────────────┐ │ Presentation Layer │ │ Web UI • Upload • Dashboard • Results │ └──────────────────────────────────────────────┘ │ ▼ ┌──────────────────────────────────────────────┐ │ Application Layer │ │ Request Routing • Validation • Orchestration │ └──────────────────────────────────────────────┘ │ ▼ ┌──────────────────────────────────────────────┐ │ Business Logic Layer │ │ Workflow • Rules • Processing Coordination │ └──────────────────────────────────────────────┘ │ ▼ ┌──────────────────────────────────────────────┐ │ Document Intelligence Layer │ │ PDF Processing • OCR • AI Analysis │ └──────────────────────────────────────────────┘ │ ▼
+6.4 High-Level Architecture The application is organized into logical layers as illustrated in the system architecture diagram below:
+
+![System Architecture Diagram](assets/architecture_diagram.png)
 
 <!-- Page 134 -->
 
-┌──────────────────────────────────────────────┐ │ Infrastructure Layer │ │ Storage • Logging • Monitoring • Security │ └──────────────────────────────────────────────┘ │ ▼ ┌──────────────────────────────────────────────┐ │ External Services Layer │ │ AI Services • Cloud Platform • Integrations │ └──────────────────────────────────────────────┘
 6.5 Layer Responsibilities Layer Primary Responsibility Presentation Layer User interaction and interface rendering Application Layer Request handling, routing, validation, and orchestration Business Logic Layer Execution of business rules and workflow coordination Document Intelligence Layer Text extraction, OCR, summarization, and analysis Infrastructure Layer Logging, monitoring, storage, security, and configuration
 
 <!-- Page 135 -->

@@ -44,6 +44,14 @@ The platform leverages Gemini AI to generate contextually accurate, structured s
 
 ---
 
+## 🏗️ System Architecture
+
+Below is the design diagram illustrating the interaction between the User, React Frontend, Node.js Backend, and processing layers (Document extraction and AI Engine):
+
+![System Architecture Diagram](assets/architecture_diagram.png)
+
+---
+
 ## 📁 Repository Structure
 
 ```text
