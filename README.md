@@ -1,4 +1,4 @@
-# Document Summary Assistant (Dr. Summary) 📄✨
+# Document Summary Assistant (Dr. Summary) 
 
 An intelligent, AI-powered web platform that extracts, analyzes, and summarizes textual content from both digital documents (PDFs) and scanned images (using Optical Character Recognition). 
 
