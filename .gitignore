@@ -1,0 +1,32 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Local databases
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+*.db
+*.db-journal
+
+# Environment variables (contains credentials like GEMINI_API_KEY)
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# Local upload files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# OS system files
+.DS_Store
+Thumbs.db
+
+# Test assets
+test_dummy.pdf
+test_doc.pdf
+*.pdf
+test_ocr.png

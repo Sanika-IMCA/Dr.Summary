@@ -1,0 +1,61 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model UploadedDocument {
+  id            String       @id @default(uuid())
+  fileName      String
+  fileType      String
+  fileSize      Int
+  status        String       // PENDING, PROCESSING, COMPLETED, FAILED
+  filePath      String
+  extractedText String?
+  pageCount     Int?
+  ocrConfidence Float?
+  language      String?      @default("eng")
+  category      String?
+  topics        String?
+  keywords      String?
+  sentiment     String?
+  complexity    String?
+  readingTime   Int?
+  wordCount     Int?
+  processingTime Float?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+  summaries     Summary[]
+  suggestions   Suggestion[]
+  keyPoints     KeyPoint[]
+}
+
+model Summary {
+  id          String           @id @default(uuid())
+  documentId  String
+  document    UploadedDocument @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  summaryType String           // SHORT, MEDIUM, DETAILED
+  summaryText String
+  createdAt   DateTime         @default(now())
+}
+
+model Suggestion {
+  id             String           @id @default(uuid())
+  documentId     String
+  document       UploadedDocument @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  suggestionType String           // READABILITY, GRAMMAR, MISSING_INFO, FORMATTING
+  suggestionText String
+  createdAt      DateTime         @default(now())
+}
+
+model KeyPoint {
+  id         String           @id @default(uuid())
+  documentId String
+  document   UploadedDocument @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  point      String
+  category   String           // TOPIC, ENTITY, CONCLUSION, FINDING
+  createdAt  DateTime         @default(now())
+}
