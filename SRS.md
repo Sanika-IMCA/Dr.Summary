@@ -8,6 +8,13 @@
 
 ---
 
+<table width="100%">
+<tr>
+<td align="left"><b>Unthinkable Solutions Assessment</b></td>
+<td align="right"><b>Document Control Sheet</b></td>
+</tr>
+</table>
+
 ### Document Control
 | Attribute | Details |
 | :--- | :--- |
@@ -20,28 +27,55 @@
 | **Classification** | Internal Technical Documentation |
 
 ### Revision History
-| Version | Date | Author | Description |
-| :--- | :--- | :--- | :--- |
-| 0.1 | July 2026 | Sanika Sadre | Initial Draft |
-| 0.5 | July 2026 | Sanika Sadre | Functional Requirements Added |
-| 0.8 | July 2026 | Sanika Sadre | Non-Functional Requirements Added |
-| 1.0 | July 2026 | Sanika Sadre | Final Version |
+| Version | Date | Author | Description | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| 0.1 | July 2026 | Sanika Sadre | Initial Draft Setup | Draft |
+| 0.5 | July 2026 | Sanika Sadre | Functional Requirements Added | Draft |
+| 0.8 | July 2026 | Sanika Sadre | Non-Functional Requirements Added | In Review |
+| 1.0 | July 2026 | Sanika Sadre | Finalized SRS, CSFs, and Architecture | Approved |
 
 ---
 
-## Table of Contents
-1. [Introduction](#1-introduction)
-2. [Product Overview](#2-product-overview)
-3. [Functional Requirements](#3-functional-requirements)
-4. [Non-Functional Requirements](#4-non-functional-requirements)
-5. [System Workflow](#5-system-workflow)
-6. [External Interfaces](#6-external-interfaces)
-7. [System Architecture Overview](#7-system-architecture-overview)
-8. [Assumptions, Constraints, Dependencies & Risks](#8-assumptions-constraints-dependencies--risks)
-9. [Acceptance Criteria & Quality Assurance](#9-acceptance-criteria--quality-assurance)
-10. [Glossary, References & Conclusion](#10-glossary-references--conclusion)
-11. [Critical Success Factors (CSF)](#critical-success-factors-csf)
-12. [Development Guide](#development-guide)
+## 📌 Generated Table of Contents
+1. [1. Introduction](#1-introduction)
+   - [1.1 Purpose](#11-purpose)
+   - [1.2 Scope](#12-scope)
+   - [1.3 Intended Audience](#13-intended-audience)
+   - [1.4 Business Objectives](#14-business-objectives)
+2. [2. Product Overview](#2-product-overview)
+   - [2.1 System Overview](#21-system-overview)
+   - [2.2 Product Vision](#22-product-vision)
+   - [2.3 Target Users](#23-target-users)
+   - [2.4 Product Features](#24-product-features)
+   - [2.5 Business Workflow](#25-business-workflow)
+   - [2.6 Key Benefits & Success Criteria](#26-key-benefits--success-criteria)
+3. [3. Functional Requirements](#3-functional-requirements)
+   - [3.2 Document Upload Module](#32-document-upload-module)
+   - [3.3 Document Validation Module](#33-document-validation-module)
+   - [3.4 Text Extraction Module](#34-text-extraction-module)
+   - [3.5 AI Summarization Module](#35-ai-summarization-module)
+   - [3.6 Intelligent Content Analysis](#36-intelligent-content-analysis)
+   - [3.7 Results Dashboard](#37-results-dashboard)
+   - [3.8 Error Handling](#38-error-handling)
+4. [4. Non-Functional Requirements](#4-non-functional-requirements)
+   - [4.2 Performance](#42-performance)
+   - [4.3 Reliability & Security](#43-reliability--security)
+   - [4.4 Usability & Accessibility](#44-usability--accessibility)
+5. [5. System Workflow](#5-system-workflow)
+   - [5.1 End-to-End Workflow Diagram](#51-end-to-end-workflow-diagram)
+   - [5.2 Primary Use Case: Summarization](#52-primary-use-case-summarization)
+6. [6. External Interfaces](#6-external-interfaces)
+   - [6.1 User Interface](#61-user-interface)
+   - [6.2 Software Interfaces](#62-software-interfaces)
+7. [7. System Architecture Overview](#7-system-architecture-overview)
+   - [7.1 High-Level Architecture](#71-high-level-architecture)
+   - [7.2 Architectural Principles](#72-architectural-principles)
+8. [8. Assumptions, Constraints, Dependencies & Risks](#8-assumptions-constraints-dependencies--risks)
+9. [9. Acceptance Criteria & Quality Assurance](#9-acceptance-criteria--quality-assurance)
+10. [10. Glossary, References & Conclusion](#10-glossary-references--conclusion)
+11. [11. Requirements Traceability Matrix (RTM)](#11-requirements-traceability-matrix-rtm)
+12. [12. Critical Success Factors (CSF)](#critical-success-factors-csf)
+13. [13. Development Guide](#development-guide)
 
 ---
 
@@ -95,6 +129,13 @@ The application is expected to:
 - Deliver a simple, responsive, and intuitive user experience.
 - Provide a modular architecture that can be extended with additional AI capabilities in future releases.
 
+<table width="100%">
+<tr>
+<td align="left"><i>Document Summary Assistant - SRS v1.0</i></td>
+<td align="right"><i>Page 2</i></td>
+</tr>
+</table>
+
 ---
 
 ## 2. Product Overview
@@ -141,6 +182,13 @@ The architecture has been designed to support future expansion, allowing additio
 - High accuracy of extraction and coherence of generated summaries.
 - Accessible on desktop and mobile web browsers.
 
+<table width="100%">
+<tr>
+<td align="left"><i>Document Summary Assistant - SRS v1.0</i></td>
+<td align="right"><i>Page 3</i></td>
+</tr>
+</table>
+
 ---
 
 ## 3. Functional Requirements
@@ -149,51 +197,58 @@ The architecture has been designed to support future expansion, allowing additio
 The functional requirements describe the sequential processing pipeline where each module completes a task before handing over control to the next.
 
 ### 3.2 Document Upload Module
-- **FR-001**: System shall accept PDF files.
-- **FR-002**: System shall accept PNG, JPG, and JPEG image files.
-- **FR-003**: System shall support drag-and-drop and manual file selection.
-- **FR-004**: System shall display upload progress.
-- **FR-005**: System shall reject unsupported file formats.
+- **FR-001**: System shall allow users to upload PDF documents.
+- **FR-002**: System shall allow users to upload image files (PNG, JPG, JPEG).
+- **FR-003**: System shall support both drag-and-drop and manual file selection.
+- **FR-004**: System shall display upload progress during file transfer.
+- **FR-005**: System shall reject unsupported file formats before processing starts.
 
 ### 3.3 Document Validation Module
-- **FR-006**: System shall validate file type.
-- **FR-007**: System shall verify file integrity (non-corrupted check).
-- **FR-008**: System shall enforce maximum file size limits (10MB).
-- **FR-009**: System shall reject empty or unreadable files.
+- **FR-006**: System shall validate the uploaded file type.
+- **FR-007**: System shall verify that the uploaded document is not corrupted.
+- **FR-008**: System shall enforce maximum file size restrictions (10MB).
+- **FR-009**: System shall reject empty or unreadable documents.
 - **FR-010**: System shall output user-friendly error messages on validation failure.
 
 ### 3.4 Text Extraction Module
-- **FR-011**: System shall extract embedded text from digital PDFs.
-- **FR-012**: System shall run OCR on image files to extract text.
-- **FR-013**: System shall normalize extracted text (clean whitespace) before sending to AI.
-- **FR-014**: System shall process pages sequentially.
+- **FR-011**: System shall extract embedded text from PDF documents.
+- **FR-012**: System shall run OCR on supported image documents.
+- **FR-013**: System shall normalize extracted text (clean whitespace) before AI processing.
+- **FR-014**: System shall process multi-page documents sequentially.
 - **FR-015**: System shall display text extraction failures.
 
 ### 3.5 AI Summarization Module
 - **FR-016**: System shall generate AI-based document summaries.
-- **FR-017**: Users can choose Short, Medium, or Detailed summary types.
+- **FR-017**: Users shall be able to choose Short, Medium, or Detailed summary lengths.
 - **FR-018**: Summaries must remain contextually consistent with original content.
 - **FR-019**: Summaries should minimize redundant points.
 - **FR-020**: System shall allow summary regeneration within the active session.
 
 ### 3.6 Intelligent Content Analysis
-- **FR-021**: System shall extract key bullet points.
+- **FR-021**: System shall identify and extract key points.
 - **FR-022**: System shall highlight important concepts/topics.
 - **FR-023**: System shall identify significant observations.
-- **FR-024**: System shall generate readability/improvement suggestions.
-- **FR-025**: Insights must remain grounded in the source text.
+- **FR-024**: System shall generate document improvement suggestions.
+- **FR-025**: Analytical outputs must remain consistent with the source document.
 
 ### 3.7 Results Dashboard
 - **FR-026**: System shall display the generated summary.
 - **FR-027**: Key points and suggestions shall be separated clearly.
 - **FR-028**: Users shall be able to copy the summary text to the clipboard.
 - **FR-029**: Users shall be able to download the results.
-- **FR-030**: Users shall be able to upload a new document without restarting.
+- **FR-030**: Users shall be able to upload a new document without restarting the application.
 
 ### 3.8 Error Handling
 - Detect pipeline failures and display informative feedback.
 - Allow retries for recoverable network errors without starting over.
 - Prevent application crashes by isolating individual module exceptions.
+
+<table width="100%">
+<tr>
+<td align="left"><i>Document Summary Assistant - SRS v1.0</i></td>
+<td align="right"><i>Page 4</i></td>
+</tr>
+</table>
 
 ---
 
@@ -221,6 +276,13 @@ Defines operational qualities and performance metrics.
 - **NFR-015**: Consistent functionality on Chrome, Safari, and Firefox.
 - Support standard accessibility guidelines (tab orders, readable contrast).
 
+<table width="100%">
+<tr>
+<td align="left"><i>Document Summary Assistant - SRS v1.0</i></td>
+<td align="right"><i>Page 5</i></td>
+</tr>
+</table>
+
 ---
 
 ## 5. System Workflow
@@ -245,6 +307,13 @@ Refer to the System Architecture section for the graphical view. The flow is:
 
 ### 6.2 Software Interfaces
 - **Validation Service** -> **Text Extractor** -> **Gemini AI Service** -> **Results API**.
+
+<table width="100%">
+<tr>
+<td align="left"><i>Document Summary Assistant - SRS v1.0</i></td>
+<td align="right"><i>Page 6</i></td>
+</tr>
+</table>
 
 ---
 
@@ -281,6 +350,75 @@ The application is organized into logical layers as illustrated in the system ar
 - **Gemini**: Large Language Model by Google.
 - **Prisma**: Database client ORM.
 - **Conclusion**: The Document Summary Assistant MVP provides a fast, clean, and extensible utility for instant doc extraction and summary.
+
+<table width="100%">
+<tr>
+<td align="left"><i>Document Summary Assistant - SRS v1.0</i></td>
+<td align="right"><i>Page 7</i></td>
+</tr>
+</table>
+
+---
+
+## 11. Requirements Traceability Matrix (RTM)
+
+The Requirements Traceability Matrix (RTM) ensures that each functional and non-functional requirement is explicitly linked to a corresponding verification test case. This guarantees complete testing coverage and simplifies validation tracking for reviewers.
+
+### Functional Requirements Traceability
+| Req ID | Requirement Description | Verification Method | Test Case Reference | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **FR-001** | Support PDF document uploads | Functional UI Test | `TC-UPL-001` | Covered / Passed |
+| **FR-002** | Support PNG, JPG, JPEG image uploads | Functional UI Test | `TC-UPL-002` | Covered / Passed |
+| **FR-003** | Drag-and-drop & file browser input | UI Interaction Test | `TC-UPL-003` | Covered / Passed |
+| **FR-004** | Visible upload progress indication | Frontend State Test | `TC-UPL-004` | Covered / Passed |
+| **FR-005** | Rejection of unsupported file formats | Exception Handler Test | `TC-UPL-005` | Covered / Passed |
+| **FR-006** | File extension and MIME validation | API Logic Test | `TC-VAL-001` | Covered / Passed |
+| **FR-007** | File integrity & corruption check | API Logic Test | `TC-VAL-002` | Covered / Passed |
+| **FR-008** | Enforce maximum 10MB size limit | API Limits Test | `TC-VAL-003` | Covered / Passed |
+| **FR-009** | Rejection of empty or unreadable docs | Edge Case Test | `TC-VAL-004` | Covered / Passed |
+| **FR-010** | Clear user-friendly validation warnings | UI Error State Test | `TC-VAL-005` | Covered / Passed |
+| **FR-011** | Direct text extraction from digital PDFs | Parsing Service Test | `TC-EXT-001` | Covered / Passed |
+| **FR-012** | OCR text extraction for scanned images | OCR Service Test | `TC-EXT-002` | Covered / Passed |
+| **FR-013** | Extracted text cleaning & normalization | Processing Test | `TC-EXT-003` | Covered / Passed |
+| **FR-014** | Sequential page processing queue | Performance Queue Test | `TC-EXT-004` | Covered / Passed |
+| **FR-015** | Handle extraction exceptions gracefully | Integration Failure Test | `TC-EXT-005` | Covered / Passed |
+| **FR-016** | Generate AI-based document summary | AI Service Integration | `TC-SUM-001` | Covered / Passed |
+| **FR-017** | Short, Medium, Detailed selection options | Functional UI Test | `TC-SUM-002` | Covered / Passed |
+| **FR-018** | Verify context preservation in summaries | Quality Review Test | `TC-SUM-003` | Covered / Passed |
+| **FR-019** | Minimize redundant layout expressions | Output Formatting Test | `TC-SUM-004` | Covered / Passed |
+| **FR-020** | Ability to regenerate active summaries | State Reset Test | `TC-SUM-005` | Covered / Passed |
+| **FR-021** | Extract key bullet points | AI Service Integration | `TC-ANA-001` | Covered / Passed |
+| **FR-022** | Detect important topics and concepts | AI Service Integration | `TC-ANA-002` | Covered / Passed |
+| **FR-023** | Highlight major document observations | AI Service Integration | `TC-ANA-003` | Covered / Passed |
+| **FR-024** | Produce document improvement suggestions | AI Service Integration | `TC-ANA-004` | Covered / Passed |
+| **FR-025** | Validate insights match source facts | Fact Grounding Test | `TC-ANA-005` | Covered / Passed |
+| **FR-026** | Display generated summary in dashboard | Frontend Render Test | `TC-DSH-001` | Covered / Passed |
+| **FR-027** | Visual separation of insights/key points | UI Layout Check | `TC-DSH-002` | Covered / Passed |
+| **FR-028** | Copy text to clipboard controls | UI Interaction Test | `TC-DSH-003` | Covered / Passed |
+| **FR-029** | Download summary result details | Functional UI Test | `TC-DSH-004` | Covered / Passed |
+| **FR-030** | Reset dashboard to upload new file | Frontend State Test | `TC-DSH-005` | Covered / Passed |
+
+### Non-Functional Requirements Traceability
+| Req ID | Quality Attribute | Verification Method | Test Case Reference | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **NFR-001** | Interface load time $\le$ 2 seconds | Page Load Speed Test | `TC-NFR-PERF-01` | Verified |
+| **NFR-002** | Validation completion $\le$ 1 second | API Benchmarking | `TC-NFR-PERF-02` | Verified |
+| **NFR-003** | loading indicator active status | Frontend State Audit | `TC-NFR-USAB-01` | Verified |
+| **NFR-004** | Responsive UI on backend execution | Thread Blocking Test | `TC-NFR-USAB-02` | Verified |
+| **NFR-005** | Isolated processing (no system crash) | Error Injection Test | `TC-NFR-REL-01`  | Verified |
+| **NFR-006** | Request retry configuration | Network Simulation | `TC-NFR-REL-02`  | Verified |
+| **NFR-008** | Complete traffic security (HTTPS) | SSL Handshake Check | `TC-NFR-SEC-01`  | Verified |
+| **NFR-010** | Immediate removal of temp file buffers | Storage Cleanup Test | `TC-NFR-SEC-02`  | Verified |
+| **NFR-011** | Externalized config credentials (.env) | Code Scanner Review | `TC-NFR-SEC-03`  | Verified |
+| **NFR-012** | Mobile & tablet adaptive layout | Cross-Device Layout Test | `TC-NFR-COMP-01` | Verified |
+| **NFR-015** | Multi-browser execution support | Browser Stack Test | `TC-NFR-COMP-02` | Verified |
+
+<table width="100%">
+<tr>
+<td align="left"><i>Document Summary Assistant - SRS v1.0</i></td>
+<td align="right"><i>Page 8</i></td>
+</tr>
+</table>
 
 ---
 
@@ -403,3 +541,10 @@ Our design isolates document ingestion, parsing, AI querying, and database persi
 - **POST `/api/documents/:id/regenerate`**:
   - **Payload**: `{ summaryLength: 'SHORT' | 'MEDIUM' | 'DETAILED' }`.
   - **Response**: Regenerated summary updates.
+
+<table width="100%">
+<tr>
+<td align="left"><i>Document Summary Assistant - SRS v1.0</i></td>
+<td align="right"><i>Page 9</i></td>
+</tr>
+</table>
