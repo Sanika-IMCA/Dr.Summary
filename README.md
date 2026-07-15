@@ -4,22 +4,35 @@
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
   <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
-</p>
-
-<h1 align="center">📄 Dr. Summary (Document Summary Assistant)</h1>
-<p align="center">
-  <b>An intelligent AI-powered document ingestion, text extraction, and multi-length summarization platform.</b>
 </p>
 
 <p align="center">
-  <a href="#-key-features">Key Features</a> •
-  <a href="#-technology-stack">Technology Stack</a> •
-  <a href="#-setup-and-installation">Setup & Installation</a> •
-  <a href="#-system-architecture">System Architecture</a> •
-  <a href="#-specifications">Documentation (SRS)</a>
+  <b>&gt; Hey There!, I am <a href="https://github.com/Sanika-IMCA">Sanika Sadre</a></b>
 </p>
+
+<p align="center">
+  [ AI-Powered Document Summary Assistant Project ]<br/>
+  [ Direct text parsing, Optical Character Recognition, & context-grounded summaries ]
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/TYPESCRIPT-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/REACT-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/NODEJS-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/EXPRESS.JS-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/PRISMA-2D3748?style=for-the-badge&logo=prisma&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLITE-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
+  <img src="https://img.shields.io/badge/TAILWIND_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white" />
+</p>
+
+---
+
+## 📖 About
+
+The **Document Summary Assistant (Dr. Summary)** is a web application designed to simplify document reading and understanding. By combining local PDF text parsing and scanned image OCR (Tesseract.js) with Google's Gemini AI, it extracts text from raw files and converts it into custom-length summaries (Short, Medium, or Detailed), extracts core bullet points, and recommends improvements for document readability.
 
 ---
 
@@ -39,42 +52,6 @@
   - Provides constructive suggestions for document improvements (readability, formatting, grammar).
 - **🎨 Responsive Dashboard**: Elegant, light/dark theme responsive layout designed with Tailwind CSS.
 - **📋 Interactive Controls**: Options to copy summaries to the clipboard, download the full parsed report, or trigger text regeneration.
-
----
-
-## 🛠️ Technology Stack
-
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <b>Frontend</b>
-    </td>
-    <td align="center" width="50%">
-      <b>Backend</b>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <ul>
-        <li><b>React (v18)</b> with <b>TypeScript</b></li>
-        <li><b>Vite</b> (fast build times & HMR)</li>
-        <li><b>Tailwind CSS</b> (modern utility-first styling)</li>
-        <li><b>Lucide React</b> (clean vector icons)</li>
-        <li><b>Axios</b> (client-server requests)</li>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li><b>Node.js</b> & <b>Express.js</b> with <b>TypeScript</b></li>
-        <li><b>Prisma ORM</b> with <b>SQLite</b> database</li>
-        <li><b>Google Gemini AI SDK</b> (NLP pipeline)</li>
-        <li><b>Tesseract.js</b> (OCR pipeline)</li>
-        <li><b>pdf-parse</b> (digital PDF extraction)</li>
-        <li><b>Multer</b> (file upload handling middleware)</li>
-      </ul>
-    </td>
-  </tr>
-</table>
 
 ---
 
@@ -175,20 +152,6 @@ npm run dev
 
 - **Frontend**: Runs locally at `http://localhost:5173` (by default)
 - **Backend API**: Runs locally at `http://localhost:5000`
-
----
-
-## 🏗️ Building for Production
-
-To build the entire application (both frontend and backend) for production:
-
-```bash
-npm run build
-```
-
-This runs:
-- `npm run build` in `/backend` (compiles TypeScript to JavaScript in `/dist`)
-- `npm run build` in `/frontend` (builds the optimized production assets in `/dist`)
 
 ---
 
